@@ -408,7 +408,7 @@ stations = [*kwun_tong_stations + tsuen_wan_stations + island_line_stations + so
              
 print(len(stations))
 
-print(stations[0:4])
+#print(stations[0:4])
 
 def get_coordinates(station_name):
     """ Function to fetch coordinates of the station name by using Google Maps Geocoding API """
@@ -428,7 +428,7 @@ station_data = []
 # Get coordinates for each station and safes it in data structure
 for station in tqdm(stations):
     # using station name in english + MTR for more accurate results
-    lat, lng = get_coordinates(station["station_eng"]+ "MTR")
+    lat, lng = get_coordinates(station["station_eng"]+ " MTR")
     station_data.append({
         "station_eng": station["station_eng"],
         "station_canto": station["station_canto"],
