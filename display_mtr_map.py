@@ -3,12 +3,12 @@ import matplotlib.pyplot as plt
 import contextily as ctx
 import matplotlib.image as mpimg
 
-edges_set = pd.read_csv("MTR_Edges_Data.csv")
-stations_set = pd.read_csv("Stations_With_Coords_And_Maps.csv")
+edges_set = pd.read_csv("datasets/MTR_Edges_Data.csv")
+stations_set = pd.read_csv("datasets/Stations_With_Coords_And_Maps.csv")
 
 
 # Load the custom background image
-background_img = mpimg.imread('hk_custom_background.png')
+background_img = mpimg.imread('media/hk_custom_background.png')
 
 fig, ax = plt.subplots(figsize=(30, 30))
 
@@ -75,4 +75,4 @@ for _, row in stations_set.iterrows():
 plt.grid(False)
 plt.axis('off')
 
-plt.savefig('hong_kong_mtr_map.png', bbox_inches='tight', pad_inches=0)
+plt.savefig('media/hong_kong_mtr_map.png', bbox_inches='tight', pad_inches=0)
